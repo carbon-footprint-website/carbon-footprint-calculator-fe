@@ -10,16 +10,19 @@
   }
 
   .main-content {
+    
     display: flex;
     flex-direction: column;
     font-size: x-large;
     position: absolute;
     top: calc((184 / 720) * 100vh); /* 약 25.6vh */
     height: calc((193 / 720) * 100vh); /* 약 26.8vh */
-    width: 347px; /* 가로 크기는 필요에 따라 설정 */
+    width:  calc((347 / 1280) * 100vw);/* 가로 크기는 필요에 따라 설정 */
     color:white;
     font-family: 'Pretendard', sans-serif;
-    font-size: 50px;
+    /* 40px ÷ 1280 × 100 */
+    font-size: clamp(20px, 50px, 60px);
+
     font-weight: 600;
   }
   
