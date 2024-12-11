@@ -1,0 +1,40 @@
+
+.selection-content-container {
+    background-color: rgba(207, 217, 226, 0.4); /* 배경 투명도 40% */
+    width: calc((1080/1280)*100vw);
+    height: calc((276/720)*100vh);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /*수직중앙정렬*/
+}
+
+.selection-inner-container {
+    background-color: beige;
+    width: calc((901/1280)*100vw);
+    height: calc((180/720)*100vh);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-content-container {
+    background-color: aqua;
+    width: calc((354/1280)*100vw);
+    height: calc((180/720)*100vh);
+}
+
+.selection-divider {
+    width: calc((1/1280)*100vw);
+    height: calc((170/720)*100vh);
+    background-color: black;
+}
+
+.right-content-container {
+    background-color: aquamarine;
+
+    width: calc((307/1280)*100vw);
+    height: calc((180/720)*100vh);
+}
+
