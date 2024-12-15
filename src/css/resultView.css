@@ -1,0 +1,126 @@
+
+.resultv-outer-container{
+    width: 100vw ;
+    height: 100vh ;
+    background-color: #DCE5EE !important;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.resultv-inner-container{
+
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: calc((100/720)*100vh);
+
+}
+
+.resultv-content-container{
+
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: calc((400/720)*100vh);
+    margin-top: calc((40/720)*100vh);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.result-left-container{
+
+    width: 44%;
+    height: calc((260/720)*100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.result-right-container{
+    width: 52%;
+    height:calc((380/720)*100vh); /*원래 400 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result-rank-container{
+    background-color: #001F3F;
+    font-family: 'Pretendard', sans-serif;
+    color:#ffffff;
+    border-radius: 18px;
+    width: 88%;
+    height: calc((145/720)*100vh);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.resultv-ratio-container {
+    display: flex;
+    flex-direction: column;
+    padding-left: 60px;
+}
+
+.resultv-desc-container{
+    background-color: rgb(255, 255, 255, 0.4);
+    width: 88%;
+    border-radius: 10px;
+    margin-top: calc((10/720)*100vh);
+    padding : 20px 0;
+    font-family: 'Pretendard', sans-serif;
+    color:#001F3F;
+    font-size: max(1.4vw,16px);
+}
+
+.resultv-desc-container >ul{
+    margin : 0 2.4vh;
+}
+
+.resultv-desc-container >ul>li{
+    margin : 1.8vh 0;
+}
+
+.resultv-title-container{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pretendard', sans-serif;
+    color:#001F3F;
+    font-size: max(50px,3.7vw);
+    font-weight: 700;
+    margin-left: max(20px,1.56vw)
+}
+
+.result-calc-container {
+    font-family: 'Pretendard', sans-serif;
+    color:#001F3F;
+    font-size: 70px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.entire-result {
+    margin-right:calc((25/1280)*100vw);
+    color: #001F3F;
+    font-weight: 600;
+    font-size: max(45px,3.5vw);
+}
+
+.result-calc-unit {
+    font-size: max(20px,1.5vw);
+    display: flex;
+    align-items: center;
+}
+
+.prior-button-container >Button {
+
+    margin-right: 20px;
+}

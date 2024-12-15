@@ -1,0 +1,114 @@
+.home-container {
+    /* 이미지 경로 */
+    background-image: url('../assets/img/home-bg.jpg'); /* 이미지 경로 */
+    background-size: cover; /* 이미지를 화면에 꽉 채움 */
+    background-position: center; /* 이미지를 가운데 정렬 */
+    height: 100vh; /* 화면 전체 높이 */
+    width: 100%; /* 화면 전체 너비 */
+    display: flex;
+    justify-content: center;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    font-size: x-large;
+    position: absolute;
+    top: calc((184 / 720) * 100vh); /* 약 25.6vh */
+    height: calc((193 / 720) * 100vh); /* 약 26.8vh */
+    width:  calc((312 / 1280) * 100vw);/* 가로 크기는 필요에 따라 설정 */
+    color:white;
+    font-family: 'Pretendard', sans-serif;
+    /* 40px ÷ 1280 × 100 */
+    /* 최소, 유연한 값(반응형), 최대*/
+  
+    font-size: max(3.2vw, 40px);
+    font-weight: 600;
+  }
+  
+  .main-content > div {
+    padding-left: 48px;
+    flex: 1; /* 자식 요소를 동일한 높이로 분배 */
+    display: flex; /* 내용 중앙 정렬을 위해 flex 사용 */
+
+  }
+  
+  .main-content :nth-child(1) {
+    align-items: flex-start;
+    justify-content: flex-start; /* 오른쪽 정렬 */
+    /*background-color: aquamarine;*/
+  }
+
+  .main-content :nth-child(2) {
+    padding-right: 71px;
+    justify-content: flex-end; /* 오른쪽 정렬 */
+  }
+
+  .main-content :nth-child(3) {
+    align-items: flex-end;
+    justify-content: flex-start; /* 오른쪽 정렬 */
+    /*background-color: aquamarine;*/
+  }
+
+  .main-content::after {
+    content: ''; /* 반드시 content를 설정해야 after가 동작 */
+    position: absolute; /* 위치 설정 */
+    top: 0;
+    left: 0; /* 왼쪽에 위치 */
+    width: 12px; /* 선의 두께 */
+    height: 100%; /* 부모 요소의 높이에 맞춤 */
+    background-color: white; /* 선 색상 */
+    opacity: 0.2; /* 투명도 50% */
+  }
+  .start-btn {
+    position: absolute; /* 위치 설정 */
+    top: calc((572 / 720) * 100vh);
+    /*height: calc((48 / 720) * 100vh); /* 약 26.8vh */
+  }
+
+  .divider{
+    position: absolute;
+    top : calc((429 / 720) * 100vh);
+    height : calc((91 / 720) * 100vh); /* 선의 두께 */
+    width: 4px; /* 부모 요소의 너비에 맞춤 */
+    background-color: #ddd; /* 선 색상 */
+    opacity: 0.8;
+  }
+
+  .sub-title {
+    position: absolute;
+    top: calc((603/720) * 100vh);
+    left: calc((1019/1280) * 100vw);
+    color:white;
+    font-family: 'Pretendard', sans-serif;
+    /* font-size: 14px; */
+    font-size: max(14px,1vw);
+    font-weight: 200;
+  }
+
+
+
+.home-text-container:nth-of-type(1) {
+  display: flex;
+  justify-content: flex-start;
+
+}
+
+.home-text-container:nth-of-type(2) {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: max(6vw, 80px);
+ 
+ /* margin-right: calc((20/1280)*100vw);*/
+}
+
+.home-text-container:nth-of-type(3) {
+  display: flex;
+  justify-content: flex-end;
+  
+}
+
+.home-text-container {
+  display: flex !important;
+  align-items: center !important;
+}

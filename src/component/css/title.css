@@ -1,0 +1,16 @@
+.title-container {
+ padding-left:20px;
+ position: relative; /* after 위치를 기준으로 설정 */
+ font-family: 'Pretendard', sans-serif;
+ font-weight: 400;
+ font-size: 1.25rem;
+
+}
+
+.title-container::after {
+    content: ''; /* after 요소 생성 */
+    position: absolute; /* 부모 요소 기준으로 위치 설정 */
+    left: 0; /* 왼쪽에 선 위치 */
+    top: 0;
+    background-color: #001F3F; /* 선 색상 */
+}

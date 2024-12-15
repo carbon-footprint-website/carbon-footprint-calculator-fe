@@ -1,0 +1,38 @@
+.progress-bar {
+    width: calc((364/1280)*100vw); /* 프로그레스바 전체 너비 */
+  /* 프로그레스바 높이 */
+    /* 비어 있는 부분의 색상 */
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.progress-bar-item {
+    display: flex;
+    flex-direction: column;
+    color : white;
+}
+
+.progress-bar-item :nth-child(1){
+    margin-right: 6px;
+}
+
+.progress-title {
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    margin-bottom: 9px;
+}
+
+.progress-title >span{
+    font-family: 'Pretendard', sans-serif;
+    font-weight: 400;
+    font-size: max(15px,1.1vw);
+    margin-bottom: 9px;
+}
+
+
+.progress-bar-step {
+    border-radius: 50px;
+}
+

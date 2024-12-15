@@ -1,0 +1,28 @@
+.selection4-content-container {
+    width: calc((865/1280)*100vw);
+    height: calc((252/720)*100vh);
+    display: flex;
+    justify-content: center;
+    align-items: center; /*수직중앙정렬*/
+}
+
+.selection4-inner-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.selection4-inner-container > .left-content-container {
+    width: 45%;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.selection4-inner-container > .right-content-container {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

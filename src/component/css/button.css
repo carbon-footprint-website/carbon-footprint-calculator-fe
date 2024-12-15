@@ -1,0 +1,22 @@
+.button {
+    color: white;
+    background-color: transparent;
+     /* 1px 테두리, 검은색 */
+    display: inline-block;
+    font-family: 'Pretendard', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+
+  
+  .button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  
+

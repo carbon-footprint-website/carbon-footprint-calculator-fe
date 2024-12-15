@@ -1,0 +1,78 @@
+
+.selection-content-container {
+    background-color: rgba(207, 217, 226, 0.4); /* 배경 투명도 40% */
+    width: calc((980/1280)*100vw);
+    height: calc((250/720)*100vh);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /*수직중앙정렬*/
+}
+
+.selection-inner-container {
+
+    width: calc((844/1280)*100vw);
+    height: calc((180/720)*100vh);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.left-content-container {
+
+    width: calc((360/1280)*100vw);
+    height: calc((180/720)*100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+.traffic-option-container {
+
+    display: flex;
+    flex-direction: column;
+    height: calc((144/720)*100vh); 
+    justify-content: space-around;
+}
+
+.traffic-btn-container:nth-of-type(1){
+    width: calc((320/1280)*100vw);
+    display: flex;
+    justify-content: space-between;
+}
+
+.traffic-btn-container:nth-of-type(2){
+    display: flex;
+    justify-content: space-between
+
+}
+
+.selection-divider {
+    width: calc((1.2/1280)*100vw);
+    height: calc((170/720)*100vh);
+    background-color: rgb(255, 255, 255);
+    opacity: 0.2;
+}
+
+.right-content-container {
+
+    width: calc((360/1280)*100vw);
+    height: calc((180/720)*100vh);
+}
+
+.right-inner-container {
+   
+    height: calc((96/720)*100vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.region-dropbox-container {
+    width: calc((320/1280)*100vw);
+    height: calc((50/720)*100vh);
+    border-radius: 10px;
+}
+
