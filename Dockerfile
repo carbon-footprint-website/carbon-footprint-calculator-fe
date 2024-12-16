@@ -16,8 +16,7 @@ FROM node:18 AS production-stage
 
 WORKDIR /app
 
-# 빌드 결과물 복사
-COPY --from=build-stage /app/dist ./dist
+COPY --from=build-stage /app/build ./build
 
 # 정적 파일 서빙
 RUN npm install -g serve
