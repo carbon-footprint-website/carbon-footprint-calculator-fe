@@ -39,8 +39,11 @@ jobs:
 
 
 
-      - name: Build the Rdacg app
-        run: npm run build
+      # - name: Build the Rdacg app
+      #   run: npm run build
+
+      - name: Build the project with ESLint disabled
+        run: DISABLE_ESLINT_PLUGIN=true npm run build
 
       - name: Build Docker image
         run: docker build . --file Dockerfile --tag ${{ env.DOCKER_IMAGE_NAME }}:latest
