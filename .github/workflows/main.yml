@@ -82,8 +82,8 @@ jobs:
             
             # 기존 컨테이너 중지 및 삭제
             if [ "$(sudo docker ps -aq -f name=vue-container)" ]; then
-              echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker stop vue-container
-              echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker rm vue-container
+              echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker stop carbon-container-fe
+              echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker rm carbon-container-fe
             fi
             
             # 새로운 컨테이너 실행
