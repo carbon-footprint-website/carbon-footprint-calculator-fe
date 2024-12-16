@@ -35,7 +35,8 @@ jobs:
   
           # 종속성 재설치
           npm install
-          npm install vue-simple-range-slider
+          npm install @babel/plugin-proposal-private-property-in-object --save-dev
+
 
 
       - name: Build the Rdacg app
