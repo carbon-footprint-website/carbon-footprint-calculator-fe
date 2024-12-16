@@ -9,7 +9,7 @@ env:
   SERVER_HOST: 211.117.197.184
   SERVER_SSH_USER: parkhaein
   PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-  DOCKER_IMAGE_NAME: kanepark/vue-app
+  DOCKER_IMAGE_NAME: kanepark/carbon-footpring-calculator
 
 jobs:
   build-and-push-docker:
@@ -81,7 +81,7 @@ jobs:
             echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker pull ${{ env.DOCKER_IMAGE_NAME }}:latest
             
             # 기존 컨테이너 중지 및 삭제
-            if [ "$(sudo docker ps -aq -f name=vue-container)" ]; then
+            if [ "$(sudo docker ps -aq -f name=carbon-container-fe)" ]; then
               echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker stop carbon-container-fe
               echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker rm carbon-container-fe
             fi
