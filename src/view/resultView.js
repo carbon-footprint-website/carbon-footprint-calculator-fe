@@ -169,7 +169,7 @@ function ResultView () {
                                 스키복 렌탈 시, 구매 대비 {data.visibleValue2}% 탄소를 덜 배출할 수 있습니다.
                                 </li>:''}
                                 {data.visibleOption3?<li>
-                                잔반을 남기지 않을을 시, 잔반 배출 대비 100% 탄소를 덜 배출할 수 있습니다.
+                                잔반을 남기지 않을 시, 잔반 배출 대비 100% 탄소를 덜 배출할 수 있습니다.
                                 </li>:''}
                             </ul>
                         </div>
