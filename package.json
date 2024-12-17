@@ -43,5 +43,7 @@
   "devDependencies": {
     "react-scripts": "^5.0.1"
   },
-  "proxy": "http://localhost:8080"
+  "proxy": "http://211.117.197.184:50"
+
+
 }
