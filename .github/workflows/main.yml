@@ -6,10 +6,10 @@ on:
       - master
 
 env:
-  SERVER_HOST: 211.117.197.184
+  SERVER_HOST: 211.202.103.217
   SERVER_SSH_USER: parkhaein
   PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-  DOCKER_IMAGE_NAME: kanepark/carbon-footpring-calculator
+  DOCKER_IMAGE_NAME: kanepark/carbon-calculator
 
 jobs:
   build-and-push-docker:
@@ -35,15 +35,11 @@ jobs:
   
           # 종속성 재설치
           npm install
-          npm install @babel/plugin-proposal-private-property-in-object --save-dev
+          npm install vue-simple-range-slider
 
 
-
-      # - name: Build the Rdacg app
-      #   run: npm run build
-
-      - name: Build the project with ESLint disabled
-        run: DISABLE_ESLINT_PLUGIN=true npm run build
+      - name: Build the Vue app
+        run: CI=false npm run build
 
       - name: Build Docker image
         run: docker build . --file Dockerfile --tag ${{ env.DOCKER_IMAGE_NAME }}:latest
@@ -65,7 +61,7 @@ jobs:
           host: ${{ env.SERVER_HOST }}
           username: ${{ env.SERVER_SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: 234
+          port: 12234
           script: |
             LOG_DIR="/home/ubuntu/app-logs"
             mkdir -p $LOG_DIR
@@ -81,11 +77,11 @@ jobs:
             echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker pull ${{ env.DOCKER_IMAGE_NAME }}:latest
             
             # 기존 컨테이너 중지 및 삭제
-            if [ "$(sudo docker ps -aq -f name=carbon-container-fe)" ]; then
-              echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker stop carbon-container-fe
-              echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker rm carbon-container-fe
+            if [ "$(sudo docker ps -aq -f name=carbon-footprint-container)" ]; then
+              echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker stop carbon-footprint-container
+              echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker rm carbon-footprint-container
             fi
             
             # 새로운 컨테이너 실행
-            echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker run --name carbon-container-fe -d -p 40:80 -e TZ=Asia/Seoul \
+            echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker run --name carbon-footprint-container -d -p 60:3000 -e TZ=Asia/Seoul \
               -v $LOG_DIR/app.log:/app/logs/app.log ${{ env.DOCKER_IMAGE_NAME }}:latest
