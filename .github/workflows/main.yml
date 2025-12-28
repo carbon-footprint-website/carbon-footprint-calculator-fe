@@ -83,5 +83,5 @@ jobs:
             fi
             
             # 새로운 컨테이너 실행
-            echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker run --name carbon-footprint-container -d -p 61:3001 -e TZ=Asia/Seoul \
+            echo "${{ secrets.SUDO_PASSWORD }}" | sudo -S docker run --name carbon-footprint-container -d -p 30061:3001 -e TZ=Asia/Seoul \
               -v $LOG_DIR/app.log:/app/logs/app.log ${{ env.DOCKER_IMAGE_NAME }}:latest
