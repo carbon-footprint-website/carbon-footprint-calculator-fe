@@ -44,7 +44,7 @@ function ResultView () {
             emissionValue: data.entireResult // 탄소 배출량
         };
     
-        fetch("http://211.202.103.217:50/api/carbon-emissions", { // API 엔드포인트
+        fetch("http://211.202.103.217:18080/api/carbon-emissions", { // API 엔드포인트
             method: "POST",
             headers: {
                 "Content-Type": "application/json", // JSON 데이터 전송
@@ -72,7 +72,7 @@ function ResultView () {
         console.log(data.visibleValue2)
         console.log('데이터 끝')
         if (data.entireResult) {
-            fetch(`http://211.202.103.217:50/api/carbon-emissions/percentile?emissionValue=${data.entireResult}`, {
+            fetch(`http://211.202.103.217:18080/api/carbon-emissions/percentile?emissionValue=${data.entireResult}`, {
                 method: 'GET',
             })
                 .then((response) => {
