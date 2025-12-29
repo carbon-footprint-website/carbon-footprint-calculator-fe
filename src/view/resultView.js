@@ -44,7 +44,7 @@ function ResultView () {
             emissionValue: data.entireResult // 탄소 배출량
         };
     
-        fetch("http://211.117.197.184:50/api/carbon-emissions", { // API 엔드포인트
+        fetch("http://211.202.103.217:18080/api/carbon-emissions", { // API 엔드포인트
             method: "POST",
             headers: {
                 "Content-Type": "application/json", // JSON 데이터 전송
@@ -72,7 +72,7 @@ function ResultView () {
         console.log(data.visibleValue2)
         console.log('데이터 끝')
         if (data.entireResult) {
-            fetch(`http://211.117.197.184:50/api/carbon-emissions/percentile?emissionValue=${data.entireResult}`, {
+            fetch(`http://211.202.103.217:18080/api/carbon-emissions/percentile?emissionValue=${data.entireResult}`, {
                 method: 'GET',
             })
                 .then((response) => {
@@ -169,7 +169,7 @@ function ResultView () {
                                 스키복 렌탈 시, 구매 대비 {data.visibleValue2}% 탄소를 덜 배출할 수 있습니다.
                                 </li>:''}
                                 {data.visibleOption3?<li>
-                                잔반을 남기지 않을을 시, 잔반 배출 대비 100% 탄소를 덜 배출할 수 있습니다.
+                                잔반을 남기지 않을 시, 잔반 배출 대비 100% 탄소를 덜 배출할 수 있습니다.
                                 </li>:''}
                             </ul>
                         </div>
