@@ -130,6 +130,7 @@ function ResultView () {
                     </div>
 
                     <div className='result-right-container'>
+                        {/*
                         <div className='result-rank-container'>
                             <div>
                              <Button label={regions[data.visibleRegion]} 
@@ -156,7 +157,7 @@ function ResultView () {
                                     탄소배출량 상위
                                 </div>
                             </div>      
-                        </div>
+                        </div>*/}
                         <div className='resultv-desc-container'>
                             <div>
                           
@@ -165,9 +166,10 @@ function ResultView () {
                                 {data.visibleOption1?<li>
                                 고속버스를 이용할 시, 자동차 대비 {data.visibleValue1}% 탄소를 덜 배출할 수 있습니다. 
                                 </li>:''}
+                                {/*}
                                 {data.visibleOption2?<li>
                                 스키복 렌탈 시, 구매 대비 {data.visibleValue2}% 탄소를 덜 배출할 수 있습니다.
-                                </li>:''}
+                                </li>:''}*/}
                                 {data.visibleOption3?<li>
                                 잔반을 남기지 않을 시, 잔반 배출 대비 100% 탄소를 덜 배출할 수 있습니다.
                                 </li>:''}
@@ -177,7 +179,7 @@ function ResultView () {
                     </div>
             </div>
             <div className='below-outer-container'>
-
+                {/*
                 <div className='prior-button-container'>
                 <Button 
                     label={"탄소발자국 저장"} 
@@ -190,7 +192,7 @@ function ResultView () {
                     border='solid 0.2vw #001F3'
                     onClick={saveCarbonEmission}
                 /> 
-                </div>  
+                </div>  */}
                 </div>
 
             </div>
