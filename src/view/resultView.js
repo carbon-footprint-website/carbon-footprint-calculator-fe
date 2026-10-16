@@ -179,7 +179,7 @@ function ResultView () {
                     </div>
             </div>
             <div className='below-outer-container'>
-                {/*
+                
                 <div className='prior-button-container'>
                 <Button 
                     label={"탄소발자국 저장"} 
@@ -194,7 +194,7 @@ function ResultView () {
                 /> 
                 </div>  
                 
-                */}
+                
                 </div>
 
             </div>
