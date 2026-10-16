@@ -6,23 +6,23 @@ import { useState, useEffect, useRef } from 'react';
 
 const regionTrafficMatrix = 
     {
-        "seoul": {"electric-car" : 0.0, "fuel-car": 33.01, "bus": 4.35, "train": 4.07, "airplane": 0.0},
-        "busan": {"electric-car" : 0.0, "fuel-car": 79.86, "bus": 10.53, "train": 14.75, "airplane": 0.0},
-        "daegu": {"electric-car" : 0.0, "fuel-car": 57.35, "bus": 7.56, "train": 12.25, "airplane": 0.0},
-        "incheon": {"electric-car" : 0.0, "fuel-car": 36.37, "bus": 4.8, "train": 5.31, "airplane": 0.0},
-        "gwangju": {"electric-car" : 0.0, "fuel-car": 79.63, "bus": 10.5, "train": 11.79, "airplane": 0.0},
-        "daejeon": {"electric-car" : 0.0, "fuel-car": 45.42, "bus": 5.99, "train": 8.27, "airplane": 0.0},
-        "ulsan": {"electric-car" : 0.0, "fuel-car": 75.94, "bus": 10.02, "train": 11.92, "airplane": 0.0},
-        "sejong": {"electric-car" : 0.0, "fuel-car": 43.39, "bus": 5.72, "train": 7.21, "airplane": 0.0},
-        "gyeonggi": {"electric-car" : 0.0, "fuel-car": 30.7, "bus": 4.05, "train": 5.59, "airplane": 0.0},
-        "chungbuk": {"electric-car" : 0.0, "fuel-car": 37.86, "bus": 4.99, "train": 7.41, "airplane": 0.0},
-        "chungnam": {"electric-car" : 0.0, "fuel-car": 51.01, "bus": 6.73, "train": 8.22, "airplane": 0.0},
-        "jeonnam": {"electric-car" : 0.0, "fuel-car": 91.77, "bus": 12.1, "train": 13.18, "airplane": 0.0},
-        "gyeongbuk": {"electric-car" : 0.0, "fuel-car": 39.4, "bus": 5.2, "train": 10.5, "airplane": 0.0},
-        "gyeongnam": {"electric-car" : 0.0, "fuel-car": 78.08, "bus": 10.3, "train": 13.74, "airplane": 0.0},
-        "gangwon": {"electric-car" : 0.0, "fuel-car": 23.86, "bus": 3.15, "train": 6.12, "airplane": 0.0},
-        "jeonbuk": {"electric-car" : 0.0, "fuel-car": 62.73, "bus": 8.27, "train": 10.3, "airplane": 0.0},
-        "jeju": {"electric-car" : 0.0, "fuel-car": 11.11, "bus": 0.0, "train": 0.0, "airplane": 98}
+           "seoul": {"electric-car": 50.5949325, "fuel-car": 567.5656872, "bus": 2.2991, "train": 0.00492, "airplane": 0},
+    "busan": {"electric-car": 254.1938175, "fuel-car": 2851.504718, "bus": 11.5509, "train": 10.56514, "airplane": 0},
+    "daegu": {"electric-car": 190.18818, "fuel-car": 2133.499933, "bus": 8.6424, "train": 7.17747, "airplane": 0},
+    "incheon": {"electric-car": 73.7588775, "fuel-car": 827.415038, "bus": 3.3517, "train": 0.00608, "airplane": 0},
+    "gwangju": {"electric-car": 218.228745, "fuel-car": 2448.05441, "bus": 9.9166, "train": 7.69106, "airplane": 0},
+    "daejeon": {"electric-car": 132.887895, "fuel-car": 1490.714696, "bus": 6.0386, "train": 4.04786, "airplane": 0},
+    "ulsan": {"electric-car": 238.95438, "fuel-car": 2680.551197, "bus": 10.8584, "train": 9.25713, "airplane": 0},
+    "sejong": {"electric-car": 127.4016975, "fuel-car": 1429.171429, "bus": 5.7893, "train": 3.15983, "airplane": 0},
+    "gyeonggi": {"electric-car": 62.7864825, "fuel-car": 704.3285034, "bus": 2.8531, "train": 0.0048, "airplane": 0},
+    "chungbuk": {"electric-car": 109.72395, "fuel-car": 1230.865346, "bus": 4.986, "train": 3.15983, "airplane": 0},
+    "chungnam": {"electric-car": 124.35381, "fuel-car": 1394.980725, "bus": 5.6508, "train": 0.00492, "airplane": 0},
+    "jeonnam": {"electric-car": 248.70762, "fuel-car": 2789.96145, "bus": 11.3016, "train": 9.3811, "airplane": 0},
+    "gyeongbuk": {"electric-car": 132.887895, "fuel-car": 1490.714696, "bus": 6.0386, "train": 5.55382, "airplane": 0},
+    "gyeongnam": {"electric-car": 233.4681825, "fuel-car": 2619.00793, "bus": 10.6091, "train": 9.74289, "airplane": 0},
+    "gangwon": {"electric-car": 12.8011275, "fuel-car": 143.600957, "bus": 0.5817, "train": 0, "airplane": 0},
+    "jeonbuk": {"electric-car": 169.462545, "fuel-car": 1901.003145, "bus": 7.7006, "train": 4.76132, "airplane": 0},
+    "jeju": {"electric-car": 0, "fuel-car": 0, "bus": 0, "train": 0, "airplane": 2472.5}
       }
       
 const Selection1 = ({onResultChange}) => {
@@ -117,7 +117,7 @@ const Selection1 = ({onResultChange}) => {
                                 color={activeTrafficButton === "airplane" ? "#001F3F" : "white"} 
                                 onClick={() => handleTrafficButtonClick('airplane')}/>
                             <Button 
-                                label={'기차'}
+                                label={'기차/지하철'}
                                 width={'calc((110/1280)*100vw)'}
                                 height={'calc((58/720)*100vh)'} 
                                 radius='8px'
