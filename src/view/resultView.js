@@ -130,7 +130,7 @@ function ResultView () {
                     </div>
 
                     <div className='result-right-container'>
-                        {/*
+                        
                         <div className='result-rank-container'>
                             <div>
                              <Button label={regions[data.visibleRegion]} 
@@ -157,7 +157,7 @@ function ResultView () {
                                     탄소배출량 상위
                                 </div>
                             </div>      
-                        </div>*/}
+                        </div>
                         <div className='resultv-desc-container'>
                             <div>
                           
@@ -192,7 +192,9 @@ function ResultView () {
                     border='solid 0.2vw #001F3'
                     onClick={saveCarbonEmission}
                 /> 
-                </div>  */}
+                </div>  
+                
+                */}
                 </div>
 
             </div>
